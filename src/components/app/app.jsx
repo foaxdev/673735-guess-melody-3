@@ -4,10 +4,11 @@ import {WelcomeScreen} from "../welcome-screen/welcome-screen";
 
 export const App = (props) => {
   return (
-    <WelcomeScreen mistakes={props.mistakes}/>
+    <WelcomeScreen mistakes={props.mistakes} onWelcomeButtonClick={props.onWelcomeButtonClick}/>
   );
 };
 
 App.propTypes = {
-  mistakes: PropTypes.number.isRequired
+  mistakes: PropTypes.number.isRequired,
+  onWelcomeButtonClick: PropTypes.func.isRequired
 };
